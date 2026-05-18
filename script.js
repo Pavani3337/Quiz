@@ -49,7 +49,7 @@ let timer;
 let timeLeft = 30;
 let userAnswers = [];
 
-// START QUIZ
+// START
 function startQuiz() {
 
     let subject = document.getElementById("subject").value;
@@ -119,7 +119,7 @@ function startTimer() {
     }, 1000);
 }
 
-// CHECK ANSWER
+// ANSWER CHECK
 function checkAnswer(selected) {
 
     let correctAns = questions[index].ans;
@@ -140,7 +140,7 @@ function checkAnswer(selected) {
     nextQuestion();
 }
 
-// NEXT QUESTION
+// NEXT
 function nextQuestion() {
     index++;
     loadQuestion();
@@ -174,6 +174,11 @@ function showResult() {
         let div = document.createElement("div");
 
         div.style.background = item.selected === item.correct ? "#2ecc71" : "#e74c3c";
+        div.style.color = "white";
+        div.style.padding = "10px";
+        div.style.margin = "10px";
+        div.style.borderRadius = "8px";
+        div.style.textAlign = "left";
 
         div.innerHTML = `
             <b>Q${i + 1}:</b> ${item.question}<br>
