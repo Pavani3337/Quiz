@@ -35,3 +35,11 @@ button {
     border-radius: 8px;
     cursor: pointer;
 }
+
+/* REVIEW BOX */
+#review div {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: left;
+}
